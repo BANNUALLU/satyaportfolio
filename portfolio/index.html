@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Set data-aws-saa-earned to true when the certificate is issued. -->
+<html lang="en" data-aws-saa-earned="false">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Allu Satyanarayana Murthy</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Allu Satyanarayana Murthy, DevOps and AWS cloud engineer. Building, deploying and managing scalable cloud applications with AWS, DevOps practices and automation.">
+<meta name="description" content="Allu Satyanarayana Murthy, DevOps and AWS cloud fresher, B.Tech AI and Data Science 2026. Building and deploying cloud applications with AWS, Docker, Linux and automation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap">
@@ -87,9 +88,9 @@ img { display: block; max-width: 100%; }
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
 }
-.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
+.nav .wrap { display: flex; align-items: center; justify-content: flex-end; gap: 16px; height: 56px; }
 .logo { font: 900 22px/1 var(--display); letter-spacing: -0.05em; color: var(--red); }
-.avail { display: flex; align-items: center; gap: 8px; }
+.avail { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .avail i { width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: blink 1.8s ease-in-out infinite; }
 @keyframes blink { 50% { opacity: 0.25; } }
 .nav ul { display: flex; gap: 28px; }
@@ -109,7 +110,8 @@ img { display: block; max-width: 100%; }
 .hello { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .hello::before { content: ""; width: 28px; height: 1px; background: var(--ink); }
 .name {
-  font: 900 clamp(84px, 14.6vw, 214px)/0.82 var(--display); letter-spacing: -0.06em; color: var(--red);
+  font: 900 clamp(64px, 10.6vw, 156px)/0.82 var(--display); letter-spacing: -0.06em; color: var(--red);
+  white-space: nowrap;
   padding-right: 0.06em;
 }
 .role { display: flex; align-items: center; gap: 20px; margin-top: 10px; }
@@ -119,7 +121,7 @@ img { display: block; max-width: 100%; }
   font: 700 clamp(12px, 1.5vw, 20px)/1.35 var(--display); letter-spacing: -0.02em; text-transform: uppercase;
   margin-top: 12px; max-width: 34em;
 }
-.sub-role b { color: var(--red-ink); font-weight: 700; }
+.sub-role b { display: block; color: var(--red-ink); font-weight: 700; }
 .tag { max-width: 36ch; color: var(--ink-2); font-size: clamp(13px, 1.1vw, 15px); margin-top: 18px; }
 .cta { display: flex; flex-wrap: wrap; gap: 14px 28px; margin-top: 28px; }
 .cta a { border-bottom: 1px solid var(--ink); padding-bottom: 6px; }
@@ -132,21 +134,8 @@ img { display: block; max-width: 100%; }
 .rise.r2 { animation-delay: calc(var(--d) + 1.4s); }
 @keyframes wipe { from { clip-path: inset(-6% 100% -6% 0); } to { clip-path: inset(-6% -6% -6% 0); } }
 
-.walker {
-  position: absolute; z-index: 2; bottom: 0; right: clamp(8px, 9vw, 170px);
-  height: 94%; aspect-ratio: 741 / 1210;
-  animation: walk 2.8s var(--d) cubic-bezier(0.3, 0.55, 0.3, 1) both;
-}
-.walker img {
-  width: 100%; height: 100%; transform-origin: 50% 100%;
-  animation: bob 0.56s var(--d) ease-in-out 5 both;
-}
-@keyframes walk { from { transform: translateX(-115vw); } to { transform: none; } }
-@keyframes bob {
-  0%, 50%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-12px) rotate(-1.2deg); }
-  75% { transform: translateY(-12px) rotate(1.2deg); }
-}
+.walker { position: absolute; z-index: 2; bottom: 48px; right: var(--gr); height: calc(100% - 72px); aspect-ratio: 690 / 1106; max-width: 35%; }
+.walker img { width: 100%; height: 100%; object-fit: contain; object-position: right bottom; }
 
 .hero-foot {
   position: absolute; z-index: 3; left: 0; right: 0; bottom: 18px;
@@ -167,11 +156,9 @@ img { display: block; max-width: 100%; }
 }
 
 /* ---------- About ---------- */
-.about-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
-.ph { position: relative; }
-.ph img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 0; mix-blend-mode: multiply; }
-.ph::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--ink); }
-.ph figcaption { margin-top: 12px; color: var(--ink-2); display: flex; justify-content: space-between; gap: 12px; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); align-items: stretch; }
+.ph { width: 100%; max-width: 480px; margin: 0; align-self: center; border-bottom: 1px solid var(--ink); }
+.ph img { width: 100%; height: auto; }
 .lead { font: 500 clamp(17px, 1.7vw, 22px)/1.55 var(--text); letter-spacing: -0.01em; max-width: 36em; margin-top: 28px; color: #2b2a28; }
 .lead b { color: var(--red-ink); font-weight: 600; }
 .sub-lead { color: var(--ink-2); max-width: 36em; margin-top: 16px; }
@@ -179,9 +166,10 @@ img { display: block; max-width: 100%; }
 .facts h3 { color: var(--red-ink); margin-bottom: 10px; }
 .facts p { font-size: 14px; line-height: 1.5; color: #2b2a28; }
 .facts p + p { margin-top: 6px; color: var(--ink-2); }
+.facts p.pri { color: #2b2a28; margin-top: 14px; }
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 40px; }
 .stat b { display: block; font: 800 clamp(34px, 4.4vw, 60px)/1 var(--display); letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
-.stat span { display: block; margin-top: 8px; font-size: 12px; line-height: 1.4; color: var(--ink-2); max-width: 16ch; }
+.stat span { display: block; margin-top: 8px; font-size: 12px; line-height: 1.4; color: var(--ink-2); max-width: 24ch; }
 
 /* ---------- Work ---------- */
 .work-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: clamp(40px, 6vw, 72px); }
@@ -194,6 +182,7 @@ img { display: block; max-width: 100%; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .chips li { border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font: 600 10px/1.2 var(--display); letter-spacing: 0.14em; text-transform: uppercase; }
 .proj .link { display: inline-block; margin-top: 22px; border-bottom: 1px solid var(--red-ink); padding-bottom: 6px; color: var(--red-ink); }
+.project-links { display: flex; flex-wrap: wrap; gap: 0 20px; }
 .proj .link:hover { color: var(--ink); border-color: var(--ink); }
 .hl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 28px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
 .hl li { font-size: 13.5px; line-height: 1.5; color: #2b2a28; padding-left: 16px; position: relative; }
@@ -234,89 +223,146 @@ img { display: block; max-width: 100%; }
 .skills li:hover { padding-left: 8px; color: var(--red-ink); }
 
 /* ---------- Milestones ---------- */
-.mile { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(36px, 5vw, 56px); border-top: 1px solid var(--ink); }
-.mile > div { padding: 24px 20px 8px 0; }
-.mile > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.mile { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 8px 28px; margin-top: clamp(36px, 5vw, 56px); }
+.mile > div { padding: 22px 0 12px; border-top: 1px solid var(--ink); }
 .mile .label { color: var(--red-ink); }
 .mile h3 { font: 800 clamp(20px, 2vw, 26px)/1.1 var(--display); letter-spacing: -0.04em; margin-top: 14px; text-wrap: balance; }
 .mile p { color: var(--ink-2); font-size: 14px; margin-top: 8px; }
 
+html:not([data-aws-saa-earned="true"]) [data-cert="aws-saa"] { display: none; }
+
 /* ---------- Night marquee ---------- */
-.night { background: var(--night); color: var(--paper); padding-block: clamp(56px, 8vw, 110px) clamp(48px, 6vw, 80px); overflow: hidden; }
+.night { background: var(--night); color: var(--paper); padding-block: 18px; overflow: hidden; }
 .marq { overflow: hidden; }
 .track { display: flex; width: max-content; animation: slide 34s linear infinite; }
-.track span { font: 900 clamp(120px, 24vw, 360px)/0.9 var(--display); letter-spacing: -0.065em; color: var(--red); white-space: nowrap; padding-right: 0.18em; }
-.track em { font-style: normal; color: var(--paper); font-size: 0.28em; vertical-align: 0.55em; padding: 0 0.25em; }
+.track-group { display: flex; flex: none; justify-content: space-around; align-items: center; gap: clamp(32px, 5vw, 72px); min-width: 100vw; padding-inline: clamp(16px, 2.5vw, 36px); }
+.tech { display: inline-flex; align-items: center; gap: 12px; font: 750 clamp(18px, 2.5vw, 30px)/1 var(--display); white-space: nowrap; }
+.lg { width: 34px; height: 34px; flex: none; color: var(--paper); }
+.lg-aws { width: 52px; }
+.marq:hover .track { animation-play-state: paused; }
 @keyframes slide { to { transform: translateX(-50%); } }
-.night-copy { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-top: clamp(28px, 4vw, 48px); }
-.night-copy p { max-width: 34ch; font: 600 clamp(16px, 1.8vw, 22px)/1.3 var(--display); letter-spacing: -0.02em; }
-.night-copy .label { color: rgba(239, 238, 234, 0.7); }
 
 /* ---------- Contact ---------- */
-.contact { padding-block: clamp(80px, 11vw, 160px) 32px; }
-.contact .big { max-width: 11em; }
-.mail { display: inline-block; margin-top: clamp(32px, 5vw, 56px); font: 800 clamp(22px, 4.2vw, 56px)/1.05 var(--display); letter-spacing: -0.045em; border-bottom: 2px solid var(--red); padding-bottom: 8px; overflow-wrap: anywhere; }
-.mail:hover { color: var(--red-ink); }
-.reach { display: flex; flex-wrap: wrap; gap: 24px 56px; margin-top: 36px; }
-.reach .label { color: var(--red-ink); display: block; margin-bottom: 8px; }
-.reach p, .reach a { font-size: 16px; }
-.reach a { border-bottom: 1px solid var(--line); }
+.contact { padding-block: clamp(52px, 8vw, 100px) 32px; }
+.contact .big { font-size: clamp(44px, 6.5vw, 86px); line-height: 0.95; }
+.contact .big span, .contact .eyebrow { color: #ff777d; }
+.contact-intro { margin-top: 20px; max-width: 36ch; color: #dedbd5; }
+.mail { display: inline-block; margin-top: 24px; font: 750 clamp(15px, 2vw, 24px)/1.35 var(--display); border-bottom: 1px solid #ff777d; padding-bottom: 4px; overflow-wrap: anywhere; }
+.mail:hover { color: #ff777d; }
+.reach { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr)); gap: 12px; margin-top: 24px; }
+.reach > * { min-width: 0; overflow-wrap: anywhere; padding: 12px 14px; border: 1px solid #5c4548; border-radius: 10px; }
+.reach a:hover { border-color: #ff777d; background: #342529; }
+.reach .label { color: #ff9b9f; display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+.contact-icon { width: 16px; height: 16px; flex: none; }
+.mail .contact-icon { vertical-align: -0.08em; margin-right: 0.4em; }
+.reach p { font-size: 14px; }
 .foot { display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; margin-top: clamp(64px, 9vw, 120px); padding-top: 22px; border-top: 1px solid var(--line); color: var(--ink-2); }
+
+.facts .gap { margin-top: 22px; }
+.more { margin-top: 16px; }
+.more summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; color: var(--red-ink); font: 700 10px/1.2 var(--display); letter-spacing: 0.22em; text-transform: uppercase; border-bottom: 1px solid var(--red-ink); padding-bottom: 4px; }
+.more summary::-webkit-details-marker { display: none; }
+.more summary i { font-style: normal; transition: transform 0.2s; }
+.more[open] summary i { transform: rotate(180deg); }
+.more-body { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); display: grid; gap: 14px; }
+.more h4 { font: 700 10px/1.2 var(--display); letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 4px; }
+.facts .more p { font-size: 14px; line-height: 1.5; margin: 0; }
+.facts .more p + p { margin-top: 3px; }
+.certs { list-style: none; display: grid; gap: 14px; }
+.certs li { font-size: 14px; line-height: 1.5; color: #2b2a28; }
+.certs small { display: block; color: var(--ink-2); font-size: 13px; }
+
+.contact-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 72px); align-items: center; padding: clamp(20px, 4.5vw, 64px); color: var(--paper); background: radial-gradient(ellipse at top left, #442429, #161315 65%); border-radius: clamp(12px, 2.5vw, 28px); }
+.form { color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: clamp(20px, 3vw, 32px); display: grid; gap: 18px; }
+.form h3 { font: 800 24px/1.1 var(--display); }
+.field { display: grid; gap: 6px; }
+.field label { font: 600 10px/1.2 var(--display); letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-2); }
+.field input, .field textarea { font: 400 16px/1.4 var(--text); color: var(--ink); background: #fff; border: 1px solid #c8c6c1; border-radius: 8px; padding: 9px 12px; width: 100%; }
+.field textarea { min-height: 110px; resize: vertical; }
+.field input::placeholder { color: var(--ink-2); opacity: 0.8; }
+.field input:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }
+.send { justify-self: start; background: var(--red); color: #fff; border: 0; padding: 14px 24px; border-radius: 8px; font: 700 11px/1 var(--display); letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer; }
+.send:hover { background: var(--ink); }
+.send:disabled { opacity: 0.6; cursor: default; }
+.form-status { min-height: 1.4em; font-size: 14px; color: var(--ink-2); }
+.form-status[data-state="err"] { color: var(--red-ink); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .about-grid, .proj, .job { grid-template-columns: minmax(0, 1fr); }
-  .ph { max-width: 460px; }
+  .ph { max-width: 300px; }
   .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .mile { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .mile > div:nth-child(3) { padding-left: 0; border-left: 0; }
-  .mile > div:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 16px; padding-top: 24px; }
 }
 @media (max-width: 720px) {
-  .avail { display: none; }
   .nav ul { gap: 20px; }
   .nav ul li:not(:last-child) { display: none; }
-  .hero { min-height: 700px; }
-  .copy { justify-content: flex-start; padding-top: 34px; }
   .role i { display: none; }
   .tag { max-width: 28ch; }
-  .walker { height: 46%; right: -4vw; }
-  .hero-foot { bottom: 14px; }
   .hero-foot > span:nth-child(2) { display: none; }
   .facts { grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hl { grid-template-columns: minmax(0, 1fr); }
   .skills { grid-template-columns: minmax(0, 1fr); }
-  .mile { grid-template-columns: minmax(0, 1fr); }
-  .mile > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 16px; padding-top: 24px; }
+}
+/* Phones and tablets in portrait: copy first, photo below on the right, same gutter */
+@media (max-width: 860px), (max-aspect-ratio: 1/1) {
+  .name { font-size: clamp(52px, 19vw, 190px); }
+  .hero { height: auto; min-height: 0; }
+  .hero > .wrap:first-child { height: auto; display: flex; flex-direction: column; }
+  .copy { height: auto; justify-content: flex-start; padding: 36px 0 12px; }
+  .walker { position: relative; right: auto; bottom: auto; height: auto; width: min(62vw, 440px); max-width: none; margin-left: auto; }
+  .walker img { height: auto; }
+  .hero-foot { position: relative; left: auto; right: auto; bottom: auto; padding-top: 16px; padding-bottom: 18px; }
+  .hero-foot::before { content: ""; position: absolute; top: 0; left: var(--gl); right: var(--gr); height: 1px; background: var(--line); }
+}
+@media (max-width: 420px) {
+  .avail { letter-spacing: 0.12em; font-size: 9px; }
+  .nav ul { letter-spacing: 0.14em; font-size: 9px; }
+}
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .cta { gap: 14px 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .loader { display: none; }
-  .mask, .rise, .walker, .walker img, .reveal, .track { animation: none !important; }
+  .mask, .rise, .reveal, .track { animation: none !important; }
+  .track { width: auto; }
+  .track-group { min-width: 0; width: 100%; flex-wrap: wrap; gap: 16px 28px; }
+  .track-group[aria-hidden="true"] { display: none; }
   .avail i, .hero-foot .scroll i { animation: none; }
   html { scroll-behavior: auto; }
 }
 </style>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-aws" viewBox="0 24 128 80"><path fill="currentColor" d="M108.59 26.148c-1.852 0-3.622.211-5.305.715-1.684.504-3.117 1.223-4.379 2.188a10.829 10.829 0 0 0-3.031 3.453c-.757 1.348-1.137 2.906-1.137 4.676 0 2.187.716 4.25 2.106 6.105 1.386 1.895 3.66 3.324 6.734 4.293l6.106 1.895c2.062.675 3.496 1.391 4.254 2.191.757.801 1.136 1.765 1.136 2.945 0 1.726-.758 3.074-2.191 4-1.43.925-3.492 1.391-6.145 1.391-1.687 0-3.328-.168-5.011-.504a23.102 23.102 0 0 1-4.633-1.476c-.421-.168-.801-.336-1.051-.418a2.357 2.357 0 0 0-.758-.13c-.634 0-.969.423-.969 1.305v2.149a2.919 2.919 0 0 0 .254 1.18c.168.38.629.8 1.305 1.18 1.094.628 2.734 1.179 4.84 1.683 2.105.504 4.297.758 6.484.758 2.15 0 4.129-.297 6.024-.883 1.808-.551 3.367-1.309 4.672-2.36 1.304-1.01 2.316-2.273 3.074-3.707.714-1.429 1.094-3.07 1.094-4.882 0-2.188-.633-4.168-1.938-5.895-1.304-1.727-3.491-3.074-6.523-4.043l-5.98-1.895c-2.23-.713-3.79-1.516-4.634-2.316-.84-.797-1.261-1.808-1.261-2.988 0-1.726.671-2.95 1.98-3.746 1.305-.801 3.199-1.18 5.598-1.18 2.988 0 5.683.547 8.086 1.64.714.337 1.261.508 1.597.508.633 0 .969-.463.969-1.347v-1.98c0-.59-.125-1.051-.379-1.391-.25-.378-.672-.715-1.262-1.051-.422-.254-1.011-.504-1.77-.758a32.528 32.528 0 0 0-2.398-.676c-.886-.168-1.769-.336-2.738-.46a21.347 21.347 0 0 0-2.82-.169zm-86.822.082c-2.316 0-4.508.254-6.57.801-2.063.505-3.831 1.137-5.303 1.895-.59.297-.97.59-1.18.883-.211.296-.293.8-.293 1.476v2.063c0 .882.293 1.304.883 1.304.168 0 .378-.043.674-.125.293-.086.796-.254 1.472-.547a33.416 33.416 0 0 1 4.547-1.433A19.176 19.176 0 0 1 20.547 32c3.242 0 5.513.633 6.863 1.938 1.304 1.303 1.98 3.534 1.98 6.734v3.074c-1.683-.379-3.283-.715-4.843-.926-1.558-.21-3.031-.336-4.461-.336-4.34 0-7.75 1.094-10.316 3.286-2.571 2.187-3.832 5.093-3.832 8.671 0 3.368 1.05 6.063 3.113 8.086 2.066 2.02 4.887 3.032 8.422 3.032 4.97 0 9.097-1.938 12.379-5.813a34.153 34.153 0 0 0 1.304 2.484 13.28 13.28 0 0 0 1.516 1.98c.422.38.844.59 1.266.59.334 0 .714-.128 1.093-.378l2.653-1.77c.546-.42.8-.843.8-1.261a1.86 1.86 0 0 0-.293-.97 22.469 22.469 0 0 1-1.347-3.03c-.297-.925-.465-2.19-.465-3.75h-.086V40c0-4.633-1.176-8.086-3.492-10.36-2.36-2.273-6.025-3.41-11.033-3.41zm19.58 1.012c-.676 0-1.012.379-1.012 1.051 0 .297.129.844.379 1.687l9.894 32.547c.254.8.547 1.387.887 1.641.336.297.84.422 1.598.422h3.62c.759 0 1.347-.125 1.684-.422.34-.293.591-.84.801-1.684l6.485-27.117 6.527 27.16c.168.84.46 1.387.8 1.684.337.292.883.422 1.684.422h3.621c.715 0 1.262-.167 1.598-.422.34-.253.633-.8.887-1.64L90.949 30.02c.168-.46.25-.797.293-1.051.043-.254.086-.466.086-.676 0-.715-.379-1.05-1.055-1.05H86.36c-.757 0-1.308.166-1.644.421-.293.25-.59.8-.84 1.64L76.59 57.517l-6.653-28.211c-.166-.8-.464-1.39-.8-1.64-.336-.298-.884-.423-1.684-.423h-3.367c-.758 0-1.348.167-1.688.422-.335.25-.588.8-.796 1.64l-6.57 27.876-7.075-27.875c-.25-.8-.504-1.39-.84-1.64-.297-.298-.844-.423-1.644-.423h-4.125zM21.64 47.496a31.816 31.816 0 0 1 3.96.25 34.401 34.401 0 0 1 3.872.719v1.765c0 1.435-.168 2.653-.422 3.665-.25 1.01-.758 1.895-1.43 2.695-1.137 1.262-2.484 2.187-4 2.695-1.516.504-2.949.758-4.336.758-1.937 0-3.41-.508-4.422-1.559-1.054-1.01-1.558-2.484-1.558-4.464 0-2.106.675-3.704 2.062-4.84 1.391-1.137 3.454-1.684 6.274-1.684zM118 73.348c-4.432.063-9.664 1.052-13.621 3.832-1.223.883-1.012 2.062.336 1.894 4.508-.547 14.44-1.726 16.21.547 1.77 2.23-1.976 11.62-3.663 15.79-.504 1.26.59 1.769 1.726.8 7.41-6.231 9.348-19.242 7.832-21.137-.757-.925-4.388-1.79-8.82-1.726zM1.63 75.859c-.926.116-1.347 1.236-.368 2.121 16.508 14.902 38.359 23.872 62.613 23.872 17.305 0 37.43-5.43 51.281-15.66 2.273-1.689.298-4.254-2.02-3.204-15.533 6.57-32.421 9.77-47.788 9.77-22.778 0-44.8-6.273-62.653-16.633-.39-.231-.755-.304-1.064-.266z"/></symbol>
+    <symbol id="i-devops" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 12c-2.2-3.2-4.2-4.6-6.2-4.6a4.6 4.6 0 000 9.2c2 0 4-1.400 6.200-4.600zm0 0c2.200 3.200 4.200 4.600 6.200 4.600a4.600 4.600 0 000-9.200c-2 0-4 1.400-6.200 4.600z"/></symbol>
+    <symbol id="i-docker" viewBox="0 0 24 24"><path fill="currentColor" d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></symbol>
+    <symbol id="i-linux" viewBox="0 0 24 24"><path fill="currentColor" d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 01-.018-.2v-.02a1.772 1.772 0 01.15-.768c.082-.22.232-.406.43-.533a.985.985 0 01.594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 00-.166-.267.248.248 0 00-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 00-.12.27.944.944 0 00-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 01-.131.068 2.62 2.62 0 01-.275-.402 1.772 1.772 0 01-.155-.667 1.759 1.759 0 01.08-.668 1.43 1.43 0 01.283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 01.016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 01-.448-.067 3.566 3.566 0 01-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.645 2.645 0 00-.402-.533 1.45 1.45 0 00-.275-.333c.182 0 .338-.03.465-.067a.615.615 0 00.314-.334c.108-.267 0-.697-.345-1.163-.345-.467-.931-.995-1.788-1.521-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.123 8.123 0 01.647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335.039.003.075.006.11.006.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01c.053 0 .105.005.157.014.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602-.369-.066-.61-.2-.723-.4-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336zm7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8.097 8.097 0 01-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065zm-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></symbol>
+    <symbol id="i-jenkins" viewBox="0 0 24 24"><path fill="currentColor" d="M2.872 24h-.975a3.866 3.866 0 01-.07-.197c-.215-.666-.594-1.49-.692-2.154-.146-.984.78-1.039 1.374-1.465.915-.66 1.635-1.025 2.627-1.62.295-.179 1.182-.624 1.281-.829.201-.408-.345-.982-.49-1.3-.225-.507-.345-.937-.376-1.435-.824-.13-1.455-.627-1.844-1.185-.63-.925-1.066-2.635-.525-3.936.045-.103.254-.305.285-.463.06-.308-.105-.72-.12-1.048-.06-1.692.284-3.15 1.425-3.66.463-1.84 2.113-2.453 3.673-3.367.58-.342 1.224-.562 1.89-.807 2.372-.877 6.027-.712 7.994.783.836.633 2.176 1.97 2.656 2.939 1.262 2.555 1.17 6.825.287 9.934-.12.421-.29 1.032-.533 1.533-.168.35-.689 1.05-.625 1.36.064.314 1.19 1.17 1.432 1.395.434.422 1.26.975 1.324 1.5.07.557-.248 1.336-.41 1.875-.217.721-.436 1.441-.654 2.131H2.87zm11.104-3.54c-.545-.3-1.361-.622-2.065-.757-.87-.164-.78 1.188-.75 1.994.03.643.36 1.316.51 1.744.076.197.09.41.256.449.3.068 1.29-.326 1.575-.479.6-.328 1.064-.844 1.574-1.189.016-.17.016-.34.03-.508a2.648 2.648 0 00-1.095-.277c.314-.15.75-.15 1.035-.332l.016-.193c-.496-.03-.69-.254-1.021-.436zm7.454 2.935a17.78 17.78 0 00.465-1.752c.06-.287.215-.918.178-1.176-.059-.459-.684-.799-1.004-1.086-.584-.525-.95-.975-1.56-1.469-.249.375-.78.615-.983.914 1.447-.689 1.71 2.625 1.141 3.69.09.329.391.45.514.735l-.086.166h1.29c.013 0 .03 0 .044.014zm-6.634-.012c-.05-.074-.1-.135-.15-.209l-.301.195h.45zm2.77 0c.008-.209.018-.404.03-.598-.53.029-.825-.48-1.196-.527-.324-.045-.6.361-1.02.195-.095.105-.183.227-.284.316.154.18.295.375.424.584h.815c.014-.164.135-.285.3-.285.165 0 .284.121.284.27h.66zm2.116 0c-.314-.479-.947-.898-1.68-.555l-.03.541h1.71zm-8.51 0l-.104-.344c-.225-.72-.36-1.26-.405-1.68-.914-.436-1.875-.87-2.654-1.426-.15-.105-1.109-1.35-1.23-1.305-1.739.676-3.359 1.86-4.814 2.984.256.557.48 1.141.69 1.74h8.505zm8.265-2.113c-.029-.512-.164-1.56-.48-1.74-.66-.39-1.846.78-2.34.943.045.15.135.271.15.48.285-.074.645-.029.898.092-.299.03-.629.03-.824.164-.074.195.016.48-.029.764.69.197 1.5.303 2.385.332.164-.227.225-.645.211-1.082zm-4.08-.36c-.044.375.046.51.12.943 1.26.391 1.034-1.74-.135-.959zM8.76 19.5c-.45.457 1.27 1.082 1.814 1.115 0-.29.165-.564.135-.77-.65-.118-1.502-.042-1.945-.347zm5.565.215c0 .043-.061.03-.068.064.58.451 1.014.545 1.802.51.354-.262.67-.563 1.043-.807-.855.074-1.931.607-2.774.23zm3.42-17.726c-1.606-.906-4.35-1.591-6.076-.731-1.38.692-3.27 1.84-3.899 3.292.6 1.402-.166 2.686-.226 4.109-.018.757.36 1.42.391 2.242-.2.338-.825.38-1.26.356-.146-.729-.4-1.549-1.155-1.63-1.064-.116-1.845.764-1.89 1.683-.06 1.08.833 2.864 2.085 2.745.488-.046.608-.54 1.139-.54.285.57-.445.75-.523 1.154-.016.105.06.511.104.705.233.944.744 2.16 1.245 2.88.635.9 1.884 1.051 3.229 1.141.24-.525 1.125-.48 1.706-.346-.691-.27-1.336-.945-1.875-1.529-.615-.676-1.23-1.41-1.261-2.28 1.155 1.604 2.1 3 4.2 3.704 1.59.525 3.45-.254 4.664-1.109.51-.359.811-.93 1.17-1.439 1.35-1.936 1.98-4.71 1.846-7.394-.06-1.111-.06-2.221-.436-2.955-.389-.781-1.695-1.471-2.475-.781-.15-.764.63-1.23 1.545-.96-.66-.854-1.336-1.858-2.266-2.384zM13.58 14.896c.615 1.544 2.724 1.363 4.505 1.323-.084.194-.256.435-.465.515-.57.232-2.145.408-2.937-.012-.506-.27-.824-.873-1.102-1.227-.137-.172-.795-.608-.012-.609zm.164-.87c.893.464 2.52.517 3.731.48.066.267.066.593.068.913-1.55.08-3.386-.304-3.794-1.395h-.005zm6.675-.586c-.473.9-1.145 1.897-2.539 1.928-.023-.284-.045-.735 0-.904 1.064-.103 1.727-.646 2.543-1.017zm-.649-.667c-1.02.66-2.154 1.375-3.824 1.21-.351-.31-.485-1-.14-1.458.181.313.06.885.57.97.944.165 2.038-.579 2.73-.84.42-.713-.046-.976-.42-1.433-.782-.93-1.83-2.1-1.802-3.51.314-.224.346.346.391.45.404.96 1.424 2.175 2.174 3 .18.21.48.39.51.524.092.39-.254.854-.209 1.11zm-13.439-.675c-.314-.184-.393-.99-.768-1.01-.535-.03-.438 1.05-.436 1.68-.37-.33-.435-1.365-.164-1.89-.308-.15-.445.164-.618.284.22-1.59 2.34-.734 1.99.96zM4.713 5.995c-.685.756-.54 2.174-.459 3.188 1.244-.785 2.898.06 2.883 1.394.595-.016.223-.744.115-1.215-.353-1.528.592-3.187.041-4.59-1.064.084-1.939.52-2.578 1.215zm9.12 1.113c.307.562.404 1.148.84 1.57.195.19.574.424.387.95-.045.121-.365.391-.551.45-.674.195-2.254.03-1.721-.81.563.015 1.314.36 1.732-.045-.314-.524-.885-1.53-.674-2.13zm6.198-.013h.068c.33.668.6 1.375 1.004 1.965-.27.628-2.053 1.19-2.023.057.39-.17 1.05-.035 1.395-.25-.193-.556-.48-1.006-.434-1.771zm-6.927-1.617c-1.422-.33-2.131.592-2.56 1.553-.384-.094-.231-.615-.135-.883.255-.701 1.28-1.633 2.119-1.506.359.057.848.386.576.834zM9.642 1.593c-1.56.44-3.56 1.574-4.2 2.974.495-.07.84-.321 1.33-.351.186-.016.428.074.641.015.424-.104.78-1.065 1.102-1.41.31-.345.685-.496.94-.81.167-.09.409-.074.42-.33-.073-.075-.15-.135-.232-.105v.017z"/></symbol>
+  </defs>
+</svg>
+
 <div class="loader" aria-hidden="true">
   <div class="loader-in">
     <div class="dot"></div>
     <div class="nm">Allu Satyanarayana Murthy</div>
-    <div class="rl">DevOps Engineer &nbsp;·&nbsp; AWS Cloud Engineer &nbsp;·&nbsp; CI/CD</div>
+    <div class="rl">DevOps &nbsp;·&nbsp; AWS &nbsp;·&nbsp; Linux &nbsp;·&nbsp; CI/CD</div>
     <div class="bar"></div>
   </div>
 </div>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Back to top">ASM.</a>
-    <span class="avail label"><i></i>Available for select projects</span>
     <nav aria-label="Primary">
       <ul class="label">
         <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#contact">Connect</a></li>
       </ul>
     </nav>
   </div>
@@ -326,56 +372,72 @@ img { display: block; max-width: 100%; }
   <section class="hero">
     <div class="wrap">
       <div class="copy">
-        <p class="hello label mask">Hello, I’m</p>
-        <h1 class="name mask" aria-label="Allu Satyanarayana Murthy">ALLU.</h1>
-        <div class="role mask m2"><h2>DevOps Engineer.</h2><i></i></div>
-        <p class="sub-role mask m3">AWS Cloud Engineer. <b>AWS Certified Cloud Practitioner.</b></p>
-        <p class="tag rise">Building, deploying and managing scalable cloud applications with AWS, DevOps practices and automation.</p>
-        <p class="cta label rise r2"><a href="#work">Selected work ↓</a><a href="#contact">Get in touch ↗</a></p>
+        <p class="hello label mask">Hello, I’m Allu Satyanarayana</p>
+        <h1 class="name mask" aria-label="Allu Satyanarayana Murthy">MURTHY.</h1>
+        <div class="role mask m2"><h2>DevOps Fresher.</h2><i></i></div>
+        <p class="sub-role mask m3"><b>AWS Certified Cloud Practitioner.</b> <b data-cert="aws-saa">AWS Certified Solutions Architect – Associate.</b></p>
+        <p class="tag rise">B.Tech graduate building and deploying cloud applications with AWS, Docker, Linux and automation.</p>
+        <p class="cta label rise r2"><a href="#work">Projects ↓</a><a href="#contact">Get in touch ↓</a><a href="assets/resume.pdf" target="_blank" rel="noopener">View Resume ↗</a></p>
       </div>
-      <div class="walker"><img src="assets/hero-cutout.webp" width="741" height="1210" alt="Allu Satyanarayana Murthy"></div>
+      <div class="walker"><img src="assets/hello-cutout.png" width="690" height="1106" alt="Allu Satyanarayana Murthy in a black shirt"></div>
     </div>
     <div class="hero-foot wrap label rise r2">
       <span class="scroll"><i></i>Scroll</span>
       <span>Allu Satyanarayana Murthy</span>
-      <span>Palakol, India · <span id="clock">IST</span></span>
+      <span>Hyderabad, India</span>
     </div>
   </section>
 
   <section class="sec" id="about">
-    <div class="wrap about-grid">
-      <figure class="ph">
-        <img src="assets/about.jpg" width="900" height="1125" alt="Portrait of Allu Satyanarayana Murthy in a black blazer" loading="lazy">
-        <figcaption class="label"><span>Allu S. Murthy</span><span>B.Tech · 2026</span></figcaption>
-      </figure>
-      <div>
-        <p class="eyebrow label reveal">About</p>
-        <h2 class="big reveal">The person<br>behind the <span>work.</span></h2>
-        <p class="lead reveal">I’m a B.Tech graduate in Artificial Intelligence and Data Science with a strong interest in <b>DevOps engineering</b>, <b>AWS cloud computing</b> and infrastructure automation. I deploy and manage applications on AWS EC2 using Docker, NGINX, Gunicorn, IAM, S3 and CloudWatch.</p>
-        <p class="sub-lead reveal">I enjoy Linux environments, automating workflows, troubleshooting deployment issues and building reliable cloud infrastructure. My goal is to keep growing as a DevOps and cloud engineer while contributing to real-world technology projects.</p>
-        <div class="facts reveal">
-          <div>
-            <h3 class="label">Education</h3>
-            <p>B.Tech, Artificial Intelligence &amp; Data Science</p>
-            <p>Swarnandhra College of Engineering and Technology, Narasapuram</p>
-            <p>2022 – 2026</p>
-          </div>
-          <div>
-            <h3 class="label">Certified</h3>
-            <p>AWS Certified Cloud Practitioner</p>
-            <p>CLF-C02, Amazon Web Services</p>
-          </div>
-          <div>
-            <h3 class="label">Based in</h3>
-            <p>Palakol, Andhra Pradesh</p>
-            <p>India</p>
-          </div>
+    <div class="wrap">
+      <div class="about-grid">
+        <figure class="ph">
+          <img src="assets/about-cutout.png" width="980" height="1225" alt="Portrait of Allu Satyanarayana Murthy in a black blazer" loading="lazy">
+        </figure>
+        <div class="about-text">
+          <p class="eyebrow label reveal">About</p>
+          <h2 class="big reveal">My background in<br><span>DevOps &amp; AWS.</span></h2>
+          <p class="lead reveal">I’m a B.Tech graduate in Artificial Intelligence and Data Science focused on <b>DevOps engineering</b> and <b>AWS cloud infrastructure</b>. I’ve deployed applications on Linux using Docker, NGINX, and AWS services including EC2, IAM, S3, and CloudWatch.</p>
+          <p class="sub-lead reveal">I enjoy automating workflows and troubleshooting deployments. I’ve learned <b>Terraform for infrastructure as code</b>, along with Linux, shell scripting, and Git. I’ve also used Jenkins to build and deploy applications through CI/CD pipelines.</p>
         </div>
-        <div class="stats reveal">
-          <div class="stat"><b>8.34</b><span>CGPA out of 10</span></div>
-          <div class="stat"><b>96%</b><span>task completion, OralAI testing</span></div>
-          <div class="stat"><b>21</b><span>application routes shipped</span></div>
-          <div class="stat"><b>~40%</b><span>less manual reporting effort</span></div>
+      </div>
+      <div class="facts reveal">
+        <div>
+          <h3 class="label">Education</h3>
+          <p>B.Tech, Artificial Intelligence &amp; Data Science</p>
+          <p>Swarnandhra College of Engineering and Technology, Narasapuram</p>
+          <p>2022 – 2026 · CGPA 8.34 / 10</p>
+          <details class="more">
+            <summary>View more <i>↓</i></summary>
+            <div class="more-body">
+              <div>
+                <h4>Intermediate (MPC)</h4>
+                <p><b>Aditya Junior College, Palakol</b></p>
+                <p>Board of Intermediate Education, Andhra Pradesh</p>
+                <p>Maths, Physics, Chemistry · May 2022</p>
+                <p>580 / 1000 marks</p>
+              </div>
+              <div>
+                <h4>SSC</h4>
+                <p>Board of Secondary Education, Andhra Pradesh</p>
+                <p>Aditya Public School, Palakollu · March 2020</p>
+                <p>592 / 600 marks · First Division</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div>
+          <h3 class="label">Certified</h3>
+          <ul class="certs">
+            <li>AWS Certified Cloud Practitioner<small>Amazon Web Services</small></li>
+            <li data-cert="aws-saa">AWS Certified Solutions Architect – Associate<small>Amazon Web Services</small></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="label">Based in</h3>
+          <p>Hyderabad, Telangana, India</p>
+          <h3 class="label gap">Hometown</h3>
+          <p>Palakol, Andhra Pradesh, India</p>
         </div>
       </div>
     </div>
@@ -385,17 +447,17 @@ img { display: block; max-width: 100%; }
     <div class="wrap">
       <div class="work-head">
         <div>
-          <p class="eyebrow label reveal">Work</p>
-          <h2 class="big reveal">Selected <span>work.</span></h2>
+          <p class="eyebrow label reveal">Projects</p>
+          <h2 class="big reveal"><span>Projects.</span></h2>
         </div>
         <p class="reveal">Cloud and DevOps projects I designed, developed and deployed, shown with how each one runs.</p>
       </div>
 
       <article class="proj reveal">
         <div>
-          <div class="proj-top label"><span>Project 01</span><span>Live in production</span></div>
+          <div class="proj-top label"><span>Project 01</span><span>Deployed on AWS EC2</span></div>
           <h3>OralAI</h3>
-          <p class="desc">An AI-powered oral health screening web application. A full-stack Flask app deployed on AWS EC2 with Docker, NGINX, Gunicorn, HTTPS and systemd, using a custom YOLOv8 model for screening.</p>
+          <p class="desc">An AI-powered oral health screening web application built using Flask and a custom YOLOv8 model. The application is deployed on AWS EC2 using Docker, NGINX and Gunicorn, with HTTPS configuration and systemd-based service management.</p>
           <ul class="chips label"><li>Flask</li><li>AWS EC2</li><li>Docker</li><li>NGINX</li><li>YOLOv8</li><li>systemd</li></ul>
           <div class="p-stats">
             <div><b>96%</b><span>task completion</span></div>
@@ -405,10 +467,10 @@ img { display: block; max-width: 100%; }
           <ul class="hl">
             <li>Custom YOLOv8 model integration</li>
             <li>Background task processing</li>
-            <li>Production deployment and server configuration</li>
-            <li>Monitoring after launch</li>
+            <li>Deployment and server configuration on AWS EC2</li>
+            <li>Service management with systemd</li>
           </ul>
-          <a class="link label" href="https://oralai.site">View oralai.site ↗</a>
+          <div class="project-links"><a class="link label" href="https://oralai.site">View oralai.site ↗</a><a class="link label" href="https://github.com/BANNUALLU/oralai" target="_blank" rel="noopener">OralAI on GitHub ↗</a></div>
         </div>
         <div class="panel" aria-label="OralAI request flow">
           <div class="panel-cap label"><span>Request flow</span><span>AWS EC2 · Docker</span></div>
@@ -434,13 +496,14 @@ img { display: block; max-width: 100%; }
             <li>Instance health monitored in CloudWatch</li>
             <li>Versioned deployments stored in S3</li>
           </ul>
+          <a class="link label" href="https://github.com/BANNUALLU?tab=repositories" target="_blank" rel="noopener">Browse my GitHub repositories ↗</a>
         </div>
         <div class="panel" aria-label="Load balancer architecture">
           <div class="panel-cap label"><span>Architecture</span><span>IAM · Security groups</span></div>
           <div class="flow">
             <div class="stage"><div class="node">Users<small>public traffic</small></div></div><div class="arr"></div>
             <div class="stage"><div class="node hot">Elastic Load Balancer<small>spreads requests</small></div></div><div class="arr"></div>
-            <div class="stage"><div class="node">EC2 instance A</div><div class="node">EC2 instance B</div></div><div class="arr"></div>
+            <div class="stage"><div class="node">EC2 instance</div><div class="node">EC2 instance</div></div><div class="arr"></div>
             <div class="stage"><div class="node">S3<small>versioned builds</small></div><div class="node">CloudWatch<small>health checks</small></div></div>
           </div>
         </div>
@@ -450,21 +513,22 @@ img { display: block; max-width: 100%; }
         <div>
           <div class="proj-top label"><span>Project 03</span><span>Fully automated</span></div>
           <h3>EverGreen</h3>
-          <p class="desc">An AI image colorization Telegram bot built with Python and the DeOldify GAN model, deployed and maintained on a cloud-hosted server.</p>
-          <ul class="chips label"><li>Python</li><li>DeOldify GAN</li><li>Telegram Bot</li><li>Cloud-hosted</li></ul>
+          <p class="desc">An AI-powered image colorization Telegram bot built using Python and the DeOldify model, deployed on a cloud-hosted server.</p>
+          <ul class="chips label"><li>Python</li><li>DeOldify</li><li>Telegram Bot</li><li>Cloud-hosted</li></ul>
           <ul class="hl">
             <li>Automated image downloading</li>
             <li>AI-based image colorization</li>
             <li>Automatic Telegram replies</li>
             <li>No manual steps, end to end</li>
           </ul>
+          <a class="link label" href="https://github.com/BANNUALLU/deoldify-image-colorizer" target="_blank" rel="noopener">EverGreen on GitHub ↗</a>
         </div>
         <div class="panel" aria-label="EverGreen workflow">
           <div class="panel-cap label"><span>Workflow</span><span>Cloud-hosted server</span></div>
           <div class="flow">
             <div class="stage"><div class="node">Telegram user<small>sends a black and white photo</small></div></div><div class="arr"></div>
             <div class="stage"><div class="node">Python bot<small>downloads the image</small></div></div><div class="arr"></div>
-            <div class="stage"><div class="node hot">DeOldify GAN<small>colorizes the image</small></div></div><div class="arr"></div>
+            <div class="stage"><div class="node hot">DeOldify model<small>colorizes the image</small></div></div><div class="arr"></div>
             <div class="stage"><div class="node">Bot reply<small>colorized photo sent back</small></div></div>
           </div>
         </div>
@@ -472,10 +536,10 @@ img { display: block; max-width: 100%; }
     </div>
   </section>
 
-  <section class="sec" id="experience">
+  <section class="sec" id="internships">
     <div class="wrap">
-      <p class="eyebrow label reveal">Experience</p>
-      <h2 class="big reveal">Where I’ve <span>worked.</span></h2>
+      <p class="eyebrow label reveal">Internships</p>
+      <h2 class="big reveal">My <span>internships.</span></h2>
       <div class="exp-list">
         <div class="job reveal">
           <div>
@@ -493,8 +557,8 @@ img { display: block; max-width: 100%; }
         <div class="job reveal">
           <div>
             <p class="when label">Apr 2025</p>
-            <h3>Tata Data Visualization, Forage Virtual Internship</h3>
-            <p class="rl">Virtual Internship</p>
+            <h3>Tata Data Visualization – Virtual Job Simulation</h3>
+            <p class="rl">Job simulation on Forage</p>
           </div>
           <ul>
             <li>Built executive-level data visualizations for business insights.</li>
@@ -511,9 +575,9 @@ img { display: block; max-width: 100%; }
       <h2 class="big reveal">Technical <span>skills.</span></h2>
       <div class="skills">
         <div class="reveal"><h3 class="label">Cloud</h3><ul><li>AWS EC2</li><li>AWS S3</li><li>AWS IAM</li><li>AWS VPC</li><li>Elastic Load Balancer</li><li>AWS CloudWatch</li></ul></div>
-        <div class="reveal"><h3 class="label">DevOps &amp; CI/CD</h3><ul><li>Docker</li><li>Jenkins fundamentals</li><li>Git and GitHub</li><li>CI/CD fundamentals</li></ul></div>
-        <div class="reveal"><h3 class="label">Operating systems</h3><ul><li>Linux and Ubuntu</li><li>Shell scripting</li><li>System administration</li></ul></div>
-        <div class="reveal"><h3 class="label">Deployment &amp; infrastructure</h3><ul><li>NGINX</li><li>Gunicorn</li><li>HTTPS</li><li>systemd</li><li>Application deployment</li><li>Cloud monitoring</li></ul></div>
+        <div class="reveal"><h3 class="label">DevOps &amp; CI/CD</h3><ul><li>Docker</li><li>Jenkins fundamentals</li><li>Git &amp; GitHub</li><li>CI/CD fundamentals</li><li>Terraform (infrastructure as code)</li></ul></div>
+        <div class="reveal"><h3 class="label">Operating systems</h3><ul><li>Linux (Ubuntu)</li><li>Shell scripting</li><li>System administration</li></ul></div>
+        <div class="reveal"><h3 class="label">Deployment &amp; infrastructure</h3><ul><li>NGINX</li><li>Gunicorn</li><li>HTTPS / TLS</li><li>systemd</li><li>Application deployment</li><li>Cloud monitoring</li></ul></div>
         <div class="reveal"><h3 class="label">Programming</h3><ul><li>Python</li><li>Java</li><li>SQL</li></ul></div>
         <div class="reveal"><h3 class="label">Tools</h3><ul><li>MySQL</li><li>Tableau</li><li>Power BI</li></ul></div>
       </div>
@@ -526,6 +590,7 @@ img { display: block; max-width: 100%; }
       <h2 class="big reveal">Certified &amp; <span>recognised.</span></h2>
       <div class="mile reveal">
         <div><p class="label">AWS</p><h3>Certified Cloud Practitioner</h3><p>CLF-C02, Amazon Web Services</p></div>
+        <div data-cert="aws-saa"><p class="label">AWS · SAA-C03</p><h3>Certified Solutions Architect – Associate</h3><p>SAA-C03, Amazon Web Services</p></div>
         <div><p class="label">NPTEL</p><h3>Machine Learning</h3><p>Certification, IIT Madras</p></div>
         <div><p class="label">Google Cloud</p><h3>Gen AI Academy</h3><p>Hack2Skill</p></div>
         <div><p class="label">2024</p><h3>Project Expo, second prize</h3><p>Swarnandhra College of Engineering and Technology</p></div>
@@ -533,50 +598,94 @@ img { display: block; max-width: 100%; }
     </div>
   </section>
 
-  <section class="night" aria-label="Core skills">
-    <div class="marq" aria-hidden="true">
+  <section class="night" aria-label="Technology stack">
+    <div class="marq">
       <div class="track">
-        <span>AWS <em>•</em> DEVOPS <em>•</em> DOCKER <em>•</em> LINUX <em>•</em> CI/CD <em>•</em></span>
-        <span>AWS <em>•</em> DEVOPS <em>•</em> DOCKER <em>•</em> LINUX <em>•</em> CI/CD <em>•</em></span>
+        <div class="track-group">
+          <span class="tech"><svg class="lg lg-aws" aria-hidden="true"><use href="#i-aws"/></svg>AWS</span>
+          <span class="tech"><svg class="lg lg-devops" aria-hidden="true"><use href="#i-devops"/></svg>DevOps</span>
+          <span class="tech"><svg class="lg lg-docker" aria-hidden="true"><use href="#i-docker"/></svg>Docker</span>
+          <span class="tech"><svg class="lg lg-linux" aria-hidden="true"><use href="#i-linux"/></svg>Linux</span>
+          <span class="tech"><svg class="lg lg-jenkins" aria-hidden="true"><use href="#i-jenkins"/></svg>Jenkins</span>
+        </div>
+        <div class="track-group" aria-hidden="true">
+          <span class="tech"><svg class="lg lg-aws" aria-hidden="true"><use href="#i-aws"/></svg>AWS</span>
+          <span class="tech"><svg class="lg lg-devops" aria-hidden="true"><use href="#i-devops"/></svg>DevOps</span>
+          <span class="tech"><svg class="lg lg-docker" aria-hidden="true"><use href="#i-docker"/></svg>Docker</span>
+          <span class="tech"><svg class="lg lg-linux" aria-hidden="true"><use href="#i-linux"/></svg>Linux</span>
+          <span class="tech"><svg class="lg lg-jenkins" aria-hidden="true"><use href="#i-jenkins"/></svg>Jenkins</span>
+        </div>
       </div>
-    </div>
-    <div class="wrap night-copy">
-      <p>Reliable cloud infrastructure, deployed and monitored.</p>
-      <span class="label">AWS · DevOps · Automation</span>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="wrap">
-      <p class="eyebrow label reveal">Get in touch</p>
-      <h2 class="big reveal">Have something ambitious in mind? <span>Let’s build it.</span></h2>
-      <a class="mail reveal" href="mailto:satyanarayanaallu27@gmail.com">satyanarayanaallu27@gmail.com</a>
-      <div class="reach reveal">
-        <div><span class="label">Phone</span><a href="tel:+918309996920">+91 83099 96920</a></div>
-        <div><span class="label">Location</span><p>Palakol, Andhra Pradesh, India</p></div>
-        <div><span class="label">Status</span><p>Open to DevOps and cloud roles</p></div>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <p class="eyebrow label">Connect</p>
+          <h2 class="big">Let’s <span>talk.</span></h2>
+          <p class="contact-intro">I’m open to entry-level DevOps and cloud engineering roles. Reach out about an opening or project.</p>
+          <a class="mail" href="mailto:satyanarayanaallu27@gmail.com"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>satyanarayanaallu27@gmail.com</a>
+          <div class="reach">
+            <a href="tel:+918309996920"><span class="label"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-1.5 2a13 13 0 0 1-7.5-7.5L9 8Z"/></svg>Call</span><p>+91 83099 96920</p></a>
+            <a href="https://github.com/BANNUALLU" target="_blank" rel="noopener"><span class="label"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.55 9.55 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub ↗</span><p>@BANNUALLU</p></a>
+            <a href="https://www.linkedin.com/in/satyanarayana-murthy-allu-46b669265/" target="_blank" rel="noopener"><span class="label"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7m4-7v7m0-4a3 3 0 0 1 6 0v4"/><circle cx="7.5" cy="7" r="1" fill="currentColor" stroke="none"/></svg>LinkedIn ↗</span><p>View profile</p></a>
+            <div><span class="label"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Location</span><p>Hyderabad, India</p></div>
+          </div>
+        </div>
+        <form class="form" id="contact-form" method="post" action="https://script.google.com/macros/s/AKfycby-h0cH-VhohWWBoLGTu0hWK-8YHev5lUcNhPwBbL1i_-sYlQUNJkX0IG05oQHFsAAN/exec" aria-labelledby="form-title">
+          <h3 id="form-title">Send a message</h3>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" maxlength="100" autocomplete="name" required></div>
+          <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" maxlength="254" autocomplete="email" required></div>
+          <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" maxlength="40" autocomplete="tel"></div>
+          <div class="field"><label for="f-title">Subject</label><input id="f-title" name="subject" maxlength="150" type="text" placeholder="For example, DevOps fresher opening" required></div>
+          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" maxlength="4000" required></textarea></div>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
+          <button class="send" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
       <div class="foot label">
-        <span>Allu Satyanarayana Murthy</span>
-        <span>DevOps &amp; Cloud Engineer</span>
-        <span>© 2026</span>
+        <span>© 2026 Allu Satyanarayana Murthy</span>
+        <span>DevOps &amp; AWS Cloud</span>
       </div>
     </div>
   </section>
 </main>
 
 <script>
-(function () {
-  var el = document.getElementById('clock');
-  if (!el) return;
-  function tick() {
-    try {
-      el.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Kolkata' }).format(new Date()) + ' IST';
-    } catch (e) {}
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('form-status');
+const sendButton = contactForm.querySelector('button[type="submit"]');
+
+contactForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (sendButton.disabled) return;
+
+  sendButton.disabled = true;
+  contactStatus.dataset.state = 'ok';
+  contactStatus.textContent = 'Sending…';
+
+  try {
+    const payload = new URLSearchParams(new FormData(contactForm));
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: payload
+    });
+    if (!response.ok || (await response.json()).ok !== true) {
+      throw new Error('The contact service did not confirm delivery.');
+    }
+
+    contactForm.reset();
+    contactStatus.textContent = 'Message sent. Please check your inbox for a confirmation.';
+  } catch {
+    contactStatus.dataset.state = 'err';
+    contactStatus.textContent = 'Could not confirm delivery. You can reach me at satyanarayanaallu27@gmail.com.';
+  } finally {
+    sendButton.disabled = false;
   }
-  tick();
-  setInterval(tick, 30000);
-})();
+});
 </script>
 
 </html>
