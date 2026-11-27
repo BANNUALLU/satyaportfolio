@@ -88,8 +88,11 @@ img { display: block; max-width: 100%; }
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
 }
-.nav .wrap { display: flex; align-items: center; justify-content: flex-end; gap: 16px; height: 56px; }
-.logo { font: 900 22px/1 var(--display); letter-spacing: -0.05em; color: var(--red); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; font: 800 14px/1 var(--display); white-space: nowrap; }
+.logo-mark { display: grid; place-items: center; flex: none; width: 34px; height: 30px; border-radius: 5px; background: var(--red-ink); color: #fff; font-size: 11px; letter-spacing: 0.04em; }
+.logo:hover .logo-name { color: var(--red-ink); }
+@media (max-width: 760px) { .logo-name { display: none; } }
 .avail { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .avail i { width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: blink 1.8s ease-in-out infinite; }
 @keyframes blink { 50% { opacity: 0.25; } }
@@ -357,6 +360,10 @@ html:not([data-aws-saa-earned="true"]) [data-cert="aws-saa"] { display: none; }
 
 <header class="nav">
   <div class="wrap">
+    <a class="logo" href="#top" aria-label="Allu Satyanarayana Murthy, home">
+      <span class="logo-mark" aria-hidden="true">ASM</span>
+      <span class="logo-name" aria-hidden="true">Allu Satyanarayana Murthy</span>
+    </a>
     <nav aria-label="Primary">
       <ul class="label">
         <li><a href="#about">About</a></li>
@@ -472,14 +479,14 @@ html:not([data-aws-saa-earned="true"]) [data-cert="aws-saa"] { display: none; }
           </ul>
           <div class="project-links"><a class="link label" href="https://oralai.site">View oralai.site ↗</a><a class="link label" href="https://github.com/BANNUALLU/oralai" target="_blank" rel="noopener">OralAI on GitHub ↗</a></div>
         </div>
-        <div class="panel" aria-label="OralAI request flow">
-          <div class="panel-cap label"><span>Request flow</span><span>AWS EC2 · Docker</span></div>
+        <div class="panel" aria-label="OralAI screening workflow">
+          <div class="panel-cap label"><span>Screening workflow</span><span>OralAI</span></div>
           <div class="flow">
-            <div class="stage"><div class="node">Browser<small>user uploads a photo</small></div></div><div class="arr"></div>
-            <div class="stage"><div class="node">NGINX<small>HTTPS termination</small></div></div><div class="arr"></div>
-            <div class="stage"><div class="node">Gunicorn<small>managed by systemd</small></div></div><div class="arr"></div>
-            <div class="stage"><div class="node">Flask app<small>21 routes, background tasks</small></div></div><div class="arr"></div>
-            <div class="stage"><div class="node hot">YOLOv8<small>screening result returned</small></div></div>
+            <div class="stage"><div class="node">Patient details<small>Enter details and choose a report language</small></div></div><div class="arr"></div>
+            <div class="stage"><div class="node">Dental photo capture<small>Capture and validate upper, front, and lower views</small></div></div><div class="arr"></div>
+            <div class="stage"><div class="node">YOLOv8 screening<small>Flag and annotate potential findings in the background</small></div></div><div class="arr"></div>
+            <div class="stage"><div class="node">PDF report<small>Compile annotated images and tailored recommendations</small></div></div><div class="arr"></div>
+            <div class="stage"><div class="node hot">View or share results<small>Open the PDF or send it by email or WhatsApp</small></div></div>
           </div>
         </div>
       </article>
